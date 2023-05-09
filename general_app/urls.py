@@ -33,7 +33,4 @@ urlpatterns = [
                   path('', include('menu_admin.urls'))
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-for menu_app in settings.MENUEXAMPLE_APPS:
-    mod = menu_app + '.urls'
-    if find_spec(mod):
-        urlpatterns.append(path(menu_app + '/', include(mod)))
+
