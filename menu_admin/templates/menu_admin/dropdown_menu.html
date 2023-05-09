@@ -1,0 +1,14 @@
+{% load menu_admin.menu_tags %}
+{% if menu_item  %}
+
+    <nav>
+        <ul class="menu-list">
+            {% menu_item menu_item %}
+        </ul>
+    </nav>
+
+{% else %}
+
+    <p>Menu '{{ menu_name }}' does not exist </p>
+
+{% endif %}
